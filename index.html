@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./swiper-bundle.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
@@ -205,11 +206,62 @@
         </div>
     </header>
 <main>
+    <div class="hero-block">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="hero-card">
+                        <div class="img">
+                            <img src="./src/images/hero1.png" alt="hero-image">
+                        </div>
+                        <div class="info">
+                            <h1>Юридическая
+                                помощь</h1>
+                            <p>Доверьте решение своей проблемы профессиональному адвокату</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="controls-block">
+                <button class="blue ripple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.965 17.11L17.792 15.937C17.206 15.351 16.256 15.351 15.671 15.937L14.749 16.859C14.543 17.065 14.231 17.134 13.965 17.017C12.629 16.432 11.309 15.545 10.132 14.368C8.96002 13.196 8.07602 11.882 7.49002 10.551C7.36802 10.276 7.43902 9.95297 7.65202 9.73997L8.47802 8.91397C9.14902 8.24297 9.14902 7.29397 8.56302 6.70797L7.39002 5.53497C6.60902 4.75397 5.34302 4.75397 4.56202 5.53497L3.91002 6.18597C3.16902 6.92697 2.86002 7.99597 3.06002 9.05597C3.55402 11.669 5.07202 14.53 7.52102 16.979C9.97002 19.428 12.831 20.946 15.444 21.44C16.504 21.64 17.573 21.331 18.314 20.59L18.965 19.939C19.746 19.158 19.746 17.892 18.965 17.11V17.11Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13 7.49097C14.031 7.47697 15.067 7.85897 15.854 8.64597" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.682 5.81799C17.113 4.24899 15.056 3.46399 13 3.46399" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.009 11.5C17.023 10.469 16.641 9.433 15.854 8.646" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.6821 5.81799C20.2511 7.38699 21.0361 9.44399 21.0361 11.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Заказать консультацию</span>
+                </button>
+                <div class="controls">
+                    <div class="hero-swiper-button-prev arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+                            <path d="M24.6705 14.3347C25.1098 14.781 25.1098 15.5047 24.6705 15.951L18.716 22L24.6705 28.049C25.1098 28.4953 25.1098 29.219 24.6705 29.6653C24.2312 30.1116 23.5188 30.1116 23.0795 29.6653L16.3295 22.8081C15.8902 22.3618 15.8902 21.6382 16.3295 21.1919L23.0795 14.3347C23.5188 13.8884 24.2312 13.8884 24.6705 14.3347Z" fill="#00B4FF"/>
+                        </svg>
+                    </div>
+                    <div class="hero-swiper-button-next arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+                            <path d="M19.3295 14.3347C18.8902 14.781 18.8902 15.5047 19.3295 15.951L25.284 22L19.3295 28.049C18.8902 28.4953 18.8902 29.219 19.3295 29.6653C19.7688 30.1116 20.4812 30.1116 20.9205 29.6653L27.6705 22.8081C28.1098 22.3618 28.1098 21.6382 27.6705 21.1919L20.9205 14.3347C20.4812 13.8884 19.7688 13.8884 19.3295 14.3347Z" fill="#00B4FF"/>
+                        </svg>
+                    </div>
+                    <div class="hero-swiper-pagination">
+                        <span class="current-slide">1</span> / <span class="total-slides">3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+
+    </div>
 </main>
 <footer class="footer">
 
 </footer>
+    <script src="./src/js/swiper-bundle.min.js"></script>
     <script src="./src/js/index.js"></script>
 </body>
 </html>

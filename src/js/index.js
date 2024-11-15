@@ -44,3 +44,45 @@ closeMenuBtn?.addEventListener('click' , ()=> {
 overlay?.addEventListener('click' , ()=> {
     hideMenuModal()
 })
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const heroSwiper = document.querySelector('.hero-swiper');
+
+    if (heroSwiper) {
+        const heroBlockSwiper = new Swiper(heroSwiper, {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: ".hero-swiper-button-next",
+                prevEl: ".hero-swiper-button-prev",
+            },
+            on: {
+                init: function () {
+                    updateCustomPagination(this);
+                },
+                slideChange: function () {
+                    updateCustomPagination(this);
+                },
+            },
+        });
+
+        function updateCustomPagination(swiperInstance) {
+            const currentSlide = swiperInstance.realIndex + 1;
+            const totalSlides = swiperInstance.slides.length;
+
+            const currentSlideEl = document.querySelector(".hero-swiper-pagination .current-slide");
+            const totalSlidesEl = document.querySelector(".hero-swiper-pagination .total-slides");
+
+            if (currentSlideEl && totalSlidesEl) {
+                currentSlideEl.textContent = currentSlide;
+                totalSlidesEl.textContent = totalSlides;
+            }
+        }
+    }
+});
+
+
+
+
+
