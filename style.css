@@ -887,7 +887,7 @@ body {
 .contacts-block {
   background-color: #1E2528;
   padding: 100px 0;
-  background-image: url("/src/images/contacts.png");
+  background-image: url("./src/images/contacts.png");
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -1003,6 +1003,7 @@ body {
   line-height: 150%; /* 30px */
 }
 .contacts-block .content .desktop-form form .title-column button {
+  padding: 20px 50px;
   width: fit-content;
 }
 .contacts-block .content .mobile-form {

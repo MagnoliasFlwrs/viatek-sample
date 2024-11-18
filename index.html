@@ -343,6 +343,52 @@
             </div>
         </div>
     </div>
+    <div class="callback-modal">
+        <div class="close-row">
+            <div class="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M5.29289 5.2929C5.68342 4.90237 6.31658 4.90237 6.70711 5.2929L12 10.5858L17.2929 5.2929C17.6834 4.90237 18.3166 4.90237 18.7071 5.2929C19.0976 5.68342 19.0976 6.31659 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31659 4.90237 5.68342 5.29289 5.2929Z" fill="#00B4FF"/>
+                </svg>
+            </div>
+        </div>
+        <div class="callback-modal-body">
+            <form>
+                <p class="title">Заказать услугу</p>
+                <div class="services-wrap">
+                    <div class="services">
+                        <p data-current="0">Не определено</p>
+                    </div>
+                    <ul class="services-list">
+                        <li data-value="0">Не определено</li>
+                        <li data-value="1">Первичная консультация специалиста</li>
+                        <li data-value="2">Адвокат по уголовному делу</li>
+                        <li data-value="3">Адвокат по гражданским делам</li>
+                        <li data-value="4">Юрист по медицинской тематике</li>
+                        <li data-value="5">Международное право</li>
+                        <li data-value="6">Другое</li>
+                    </ul>
+                </div>
+                <span class="text">Спасибо, что обратились к нам! <br><br>
+Как только мы получим от вас сообщение, наши менеджеры постараются в кратчайшие сроки дать вам исчерпывающую информацию по всем вашим вопросам. </span>
+                <input type="text" placeholder="Ваше имя">
+                <input type="tel" placeholder="+7 (___) ___ - __ - __">
+                <textarea placeholder="Дополнительная информация"></textarea>
+                <div class="agreement">
+                    <label class="switch">
+                        <input type="checkbox" class="agreement-check">
+                        <span class="slider round"></span>
+                    </label>
+                    <p>Я даю согласие на обработку персональных данных в соответствии с законодательством Российской Федерации</p>
+                </div>
+                <button class="blue ripple" type="submit">
+                    <span>Отправить</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <path d="M9.29289 5.79289C8.90237 6.18342 8.90237 6.81658 9.29289 7.20711L14.5858 12.5L9.29289 17.7929C8.90237 18.1834 8.90237 18.8166 9.29289 19.2071C9.68342 19.5976 10.3166 19.5976 10.7071 19.2071L16.7071 13.2071C17.0976 12.8166 17.0976 12.1834 16.7071 11.7929L10.7071 5.79289C10.3166 5.40237 9.68342 5.40237 9.29289 5.79289Z" fill="white"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
     <header class="header">
         <div class="white-row">
             <div class="content">
@@ -494,7 +540,7 @@
         </div>
         <div class="content">
             <div class="controls-block">
-                <button class="blue ripple">
+                <button class="blue ripple show-order-modal">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M18.965 17.11L17.792 15.937C17.206 15.351 16.256 15.351 15.671 15.937L14.749 16.859C14.543 17.065 14.231 17.134 13.965 17.017C12.629 16.432 11.309 15.545 10.132 14.368C8.96002 13.196 8.07602 11.882 7.49002 10.551C7.36802 10.276 7.43902 9.95297 7.65202 9.73997L8.47802 8.91397C9.14902 8.24297 9.14902 7.29397 8.56302 6.70797L7.39002 5.53497C6.60902 4.75397 5.34302 4.75397 4.56202 5.53497L3.91002 6.18597C3.16902 6.92697 2.86002 7.99597 3.06002 9.05597C3.55402 11.669 5.07202 14.53 7.52102 16.979C9.97002 19.428 12.831 20.946 15.444 21.44C16.504 21.64 17.573 21.331 18.314 20.59L18.965 19.939C19.746 19.158 19.746 17.892 18.965 17.11V17.11Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M13 7.49097C14.031 7.47697 15.067 7.85897 15.854 8.64597" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -530,7 +576,10 @@
             <div class="service-cards">
                 <div class="service-card midi">
                     <div class="image">
-                        <img src="./src/images/service1.png" alt="service-image">
+                        <picture>
+                            <source srcset="./src/images/1service.png" media="(max-width: 500px)" />
+                            <img src="./src/images/service1.png" alt="service-image" />
+                        </picture>
                     </div>
                     <div class="info">
                         <p class="title">Консультация юриста</p>
@@ -539,7 +588,10 @@
                 </div>
                 <div class="service-card">
                     <div class="image">
-                        <img src="./src/images/service2.png" alt="service-image">
+                        <picture>
+                            <source srcset="./src/images/2service.png" media="(max-width: 500px)" />
+                            <img src="./src/images/service2.png" alt="service-image" />
+                        </picture>
                     </div>
                     <div class="info">
                         <p class="title">Семейные дела</p>
@@ -548,7 +600,10 @@
                 </div>
                 <div class="service-card">
                     <div class="image">
-                        <img src="./src/images/service3.png" alt="service-image">
+                        <picture>
+                            <source srcset="./src/images/3service.png" media="(max-width: 500px)" />
+                            <img src="./src/images/service3.png" alt="service-image" />
+                        </picture>
                     </div>
                     <div class="info">
                         <p class="title">Срочный юрист</p>
@@ -557,7 +612,10 @@
                 </div>
                 <div class="service-card">
                     <div class="image">
-                        <img src="./src/images/service4.png" alt="service-image">
+                        <picture>
+                            <source srcset="./src/images/4service.png" media="(max-width: 500px)" />
+                            <img src="./src/images/service4.png" alt="service-image" />
+                        </picture>
                     </div>
                     <div class="info">
                         <p class="title">Уголовные дела</p>
@@ -566,7 +624,10 @@
                 </div>
                 <div class="service-card">
                     <div class="image">
-                        <img src="./src/images/service5.png" alt="service-image">
+                        <picture>
+                            <source srcset="./src/images/5service.png" media="(max-width: 500px)" />
+                            <img src="./src/images/service5.png" alt="service-image" />
+                        </picture>
                     </div>
                     <div class="info">
                         <p class="title">Гражданские дела</p>
@@ -575,7 +636,10 @@
                 </div>
                 <div class="service-card">
                     <div class="image">
-                        <img src="./src/images/service9.png" alt="service-image">
+                        <picture>
+                            <source srcset="./src/images/1service.png" media="(max-width: 500px)" />
+                            <img src="./src/images/service9.png" alt="service-image" />
+                        </picture>
                     </div>
                     <div class="info">
                         <p class="title">Наследственные дела</p>
@@ -584,7 +648,12 @@
                 </div>
                 <div class="service-card">
                     <div class="image">
-                        <img src="./src/images/service7.png" alt="service-image">
+                        <div class="image">
+                            <picture>
+                                <source srcset="./src/images/2service.png" media="(max-width: 500px)" />
+                                <img src="./src/images/service7.png" alt="service-image" />
+                            </picture>
+                        </div>
                     </div>
                     <div class="info">
                         <p class="title">Юрист по наркотикам</p>
@@ -593,7 +662,12 @@
                 </div>
                 <div class="service-card">
                     <div class="image">
-                        <img src="./src/images/service8.png" alt="service-image">
+                        <div class="image">
+                            <picture>
+                                <source srcset="./src/images/3service.png" media="(max-width: 500px)" />
+                                <img src="./src/images/service8.png" alt="service-image" />
+                            </picture>
+                        </div>
                     </div>
                     <div class="info">
                         <p class="title">Медицинские дела</p>
@@ -602,7 +676,12 @@
                 </div>
                 <div class="service-card maxi">
                     <div class="image">
-                        <img src="./src/images/service6.png" alt="service-image">
+                        <div class="image">
+                            <picture>
+                                <source srcset="./src/images/4service.png" media="(max-width: 500px)" />
+                                <img src="./src/images/service6.png" alt="service-image" />
+                            </picture>
+                        </div>
                     </div>
                     <div class="info">
                         <p class="title">Автоюрист</p>

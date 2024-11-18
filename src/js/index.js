@@ -167,11 +167,17 @@ function boxHandler(e) {
     }
 }
 
-Fancybox.bind('[data-fancybox]', {
-});
+const galleryitems = document.querySelectorAll('.gallery-item');
 
-Fancybox.bind('[data-fancybox="gallery"]', {
-});
+if(galleryitems.length > 0) {
+
+    Fancybox.bind('[data-fancybox]', {
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+    });
+}
+
 
 // callback-modal
 
