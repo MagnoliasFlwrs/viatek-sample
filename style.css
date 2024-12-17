@@ -3360,4 +3360,21 @@ body {
   display: block;
 }
 
+.price-modal .chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.price-modal .chapter .chapter-title {
+  color: #262D2A;
+  font-family: "Noto Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.price-modal .chapter ul li .box .content .box-content-wrapper .order {
+  width: 100% !important;
+}
+
 /*# sourceMappingURL=style.css.map */
